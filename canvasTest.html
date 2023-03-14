@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Canvas Line Demo</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById('myCanvas');
+      const context = canvas.getContext('2d');
+      context.translate(canvas.width/2, canvas.height/2)
+      
+      // 设置线条颜色和宽度
+      context.strokeStyle = 'blue';
+      context.lineWidth = 5;
+      
+      // 开始绘制线条
+      context.beginPath();
+      context.moveTo(-11, 50); // 起点
+      context.lineTo(350, 350); // 终点
+      context.stroke(); // 绘制线条
+    </script>
+  </body>
+</html>
